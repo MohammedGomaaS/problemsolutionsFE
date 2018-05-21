@@ -5,4 +5,4 @@ import { mdComponents } from './md-components';
     exports: mdComponents,
 })
 
-export class MyOwnCustomMaterialModule { }
+export class AppMDModule { }
