@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
+//compnents
 import { AppComponent } from './app.component';
 import { ProblemComponent } from './problem/problem.component';
 import { ProblemsComponent } from './problems/problems.component';
@@ -16,6 +17,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+//services
+import {ProblemsService} from './app-services/problems/problems.service';
+
 
 @NgModule({
   declarations: [
@@ -36,9 +40,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,HttpModule
   ],
-  providers: [],
+  providers: [ProblemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
